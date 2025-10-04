@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>2005 GMC W4500 — $8,500 | Torrance, CA</title>
+  <meta name="description" content="2005 GMC W4500 box truck with liftgate. Clean, reliable workhorse — ready to roll. Call or text to schedule a viewing in Torrance, CA." />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root { --radius: 16px; }
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; background:#0b0e13; color:#e7edf3; }
+    .card { border-radius: var(--radius); box-shadow: 0 10px 30px rgba(0,0,0,.35); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); backdrop-filter: blur(6px); }
+    .glass { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); }
+    .badge { background: #0ea5e9; color: #001219; border-radius: 9999px; padding: .25rem .6rem; font-weight: 700; font-size: .75rem; letter-spacing: .02em; }
+    .btn { display:inline-flex; align-items:center; gap:.5rem; padding:.9rem 1.25rem; border-radius: 999px; font-weight:700; }
+    .btn-primary { background:#22c55e; color:#061014; }
+    .btn-primary:hover { filter: brightness(1.05); }
+    .btn-ghost { background: transparent; border:1px solid rgba(255,255,255,.14); }
+    .spec { background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius: 12px; padding:.9rem; }
+    .ring-brand { box-shadow: 0 0 0 2px rgba(34,197,94,.3), 0 10px 30px rgba(34,197,94,.25); }
+
+    /* Slider */
+    .slider { position:relative; overflow:hidden; border-radius: var(--radius); aspect-ratio: 16/9; background:#111827; }
+    .slides { display:flex; width:100%; height:100%; transition: transform .6s ease; }
+    .slide { min-width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+    .slide img { width:100%; height:100%; object-fit:cover; }
+    .slider-controls { position:absolute; inset:auto 0 0 0; display:flex; justify-content:space-between; align-items:center; padding:.5rem .75rem; gap:.5rem; background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.55)); }
+    .dot { width:9px; height:9px; border-radius:50%; background: rgba(255,255,255,.4); cursor:pointer; }
+    .dot.active { background:#fff; }
+    .pill { border-radius:9999px; padding:.25rem .6rem; border:1px solid rgba(255,255,255,.2); background:rgba(0,0,0,.35); }
+
+    /* Thumbnails */
+    .thumbs img { aspect-ratio:16/10; object-fit:cover; border-radius:12px; border:1px solid rgba(255,255,255,.08); cursor:pointer; }
+    .thumbs img:hover { outline:2px solid rgba(255,255,255,.25); }
+  </style>
+</head>
+<body>
+  <!-- Hero Section with Updated Images -->
+  <section class="max-w-6xl mx-auto px-4 py-8 md:py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+      <div class="card p-3">
+        <div class="slider" id="slider">
+          <div class="slides" id="slides">
+            <div class="slide"><img src="truck-3.jpg.jpg" alt="2005 GMC W4500 — front three-quarter view" loading="eager"></div>
+            <div class="slide"><img src="truck-4.jpg.jpg" alt="W4500 rear box with liftgate" loading="lazy"></div>
+            <div class="slide"><img src="truck-1.jpg.jpg" alt="Cab interior, dash and bench seat" loading="lazy"></div>
+            <div class="slide"><img src="truck-2.jpg.jpg" alt="Dual rear tires close-up" loading="lazy"></div>
+          </div>
+          <div class="slider-controls">
+            <div class="flex items-center gap-2">
+              <button id="prev" class="pill text-sm">◀︎ Prev</button>
+              <button id="next" class="pill text-sm">Next ▶︎</button>
+            </div>
+            <div class="flex items-center gap-2">
+              <button id="toggle" class="btn btn-ghost text-xs">⏸️ Pause</button>
+              <div class="flex items-center gap-1" id="dots"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Updated Thumbnails -->
+        <div class="thumbs grid grid-cols-4 gap-2 mt-3">
+          <img src="truck-3.jpg.jpg" alt="Front view" data-jump="0" loading="lazy">
+          <img src="truck-4.jpg.jpg" alt="Rear liftgate" data-jump="1" loading="lazy">
+          <img src="truck-1.jpg.jpg" alt="Interior" data-jump="2" loading="lazy">
+          <img src="truck-2.jpg.jpg" alt="Rear tires" data-jump="3" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
